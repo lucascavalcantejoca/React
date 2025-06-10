@@ -31,7 +31,7 @@
 .logo h1 {
     font-size: 60px;
     color: white;
-    animation: h1P 1.2s;
+    animation: h1 1.2s;
 }
 
 .logo p {
@@ -39,12 +39,24 @@
     margin-top: 14px;
     margin-bottom: 34px;
     font-size: 19px;
-    animation: h1P 1.58s;
+    animation: P 1.58s;
 }
 
-@keyframes h1P {
+@keyframes h1 {
     from {
         transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes P {
+    from {
+        transform: translateX(100px);
         opacity: 0;
     }
 
