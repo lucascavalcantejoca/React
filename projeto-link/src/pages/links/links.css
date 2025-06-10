@@ -1,0 +1,17 @@
+.links-container {
+  max-width: 1120px;
+  margin: 32px auto 0 auto;
+}
+
+.links-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.links-header svg {
+    margin-right: 14px;
+}
+
+.links-header h1 {
+    color: white;
+}
