@@ -15,3 +15,57 @@
 .links-header h1 {
     color: white;
 }
+
+.links-item {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.links-item:last-child {
+    margin-bottom: 18px;
+}
+
+.link {
+    border: 0;
+    width: 100%;
+    height: 46px;
+    min-width: 80%;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.144);
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    font-size: 18px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.link svg {
+    margin-right: 14px;
+}
+
+.link-delete {
+    border: none;
+    background-color: transparent;
+}
+
+@media (max-width: 720px) {
+   
+    .logo h1 {
+        font-size: 40px;
+    }
+
+    .links-item {
+        width: 100%;
+    }
+
+    .link {
+        width: 100%;
+    }
+}

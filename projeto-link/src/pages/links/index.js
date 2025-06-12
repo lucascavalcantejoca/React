@@ -1,19 +1,32 @@
 import './links.css';
 import {FiArrowLeft, FiLink, FiTrash} from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 export default function Links() {
   return(
     <div className="links-container">
 
       <div className='links-header'>
-        <FiArrowLeft size={38} color='white'/>
+        <Link to={'/'}>
+          <FiArrowLeft size={38} color='white'/>
+        </Link>
         <h1>Meus Links</h1>
       </div>
 
       <div className='links-item'>
-        <FiLink size={18} color='white'/>
-        <button>https://www.youtube.com/</button>
-        <button>
+        <button className='link'> <FiLink size={18} color='white'/>
+        https://www.youtube.com/
+        </button>
+        <button className='link-delete'>
+          <FiTrash size={24} color='#FF5454'/>
+        </button>
+      </div>
+
+      <div className='links-item'>
+        <button className='link'> <FiLink size={18} color='white'/>
+        https://www.youtube.com/
+        </button>
+        <button className='link-delete'>
           <FiTrash size={24} color='#FF5454'/>
         </button>
       </div>
