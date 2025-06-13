@@ -1,8 +1,19 @@
 import {FiLink} from 'react-icons/fi'
 import './home.css';
 import Menu from '../../components/Menu';
+import { useState } from 'react';
+
+import LinkItem from '../../components/LinkItem';
 
 export default function Home() {
+
+  const [link, setLink] = useState('');
+  const [showModal, setShowModal] = useState(false);
+
+  function meuLink() {
+    setShowModal(true);
+  }
+
   return(
     <div className="container-home">
 
@@ -15,13 +26,18 @@ export default function Home() {
       <div className="area-input">
         <div>
           <FiLink size={24} color='white'/>
-          <input type="text" placeholder="Cole seu link aqui..."/>
+          <input
+           type="text"
+            placeholder="Cole seu link aqui..."
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            />
         </div>
-        <button>Gerar Link</button>
+        <button onClick={meuLink}>Gerar Link</button>
       </div>
 
-      <Menu />
-
+      <Menu/>
+      {showModal && <LinkItem/>}
     </div>
   )
 }
